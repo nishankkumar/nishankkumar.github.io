@@ -1,0 +1,156 @@
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 1.4;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+.test {
+	color: red;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1024px;
+	padding-bottom: 40px;
+}
+.inner-container {
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 30px 10px;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.hide {
+	display: none;
+}
+.input-group {
+	margin-bottom: 15px;
+	position: relative;
+
+}
+.input-group label {
+	display: block;
+	color: #aaa;
+	font-size: 14px;
+	padding: 0px 2px;
+}
+input {
+	border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 2px;
+    font-size: 16px;
+    width: 100%;
+}
+input:focus {
+	box-shadow: none;
+	outline: 0;
+	border-color: #33B8FF;
+}
+input[type=button], input[type=submit], .btn {
+    color: #fff;
+    background-color: #3399FF;
+    cursor:pointer;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+input[type=button]:hover, input[type=submit]:hover, , .btn:hover {
+    background-color:rgba(255,204,0,0.8);
+}
+.form-month-year {
+	width: 50%;
+}
+.form-month-year input {
+	width: 40%;
+	margin-right: 5%;
+}
+.list-wrap {
+	border: 1px solid #ddd;
+    padding: 0;
+}
+.my-list {
+	padding: 0;
+	margin: 0;
+}
+.my-list li {
+	list-style: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.my-list li:last-child {
+	border: none;
+}
+.edit-delete-wrap {
+	margin-bottom: 5px;
+}
+.edit-delete-wrap > span {
+	color: #444;
+}
+.edit-delete {
+	color: #aaa;
+}
+.edit-delete a {
+	vertical-align: middle;
+    margin: 0 10px;
+    color: #000;
+    opacity: 0.5;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.edit-delete a:hover {
+	opacity: 1;
+}
+.edit-delete img {
+	width: 18px;
+}
+.details-wrap > p {
+	margin: 0 12px;
+}
+.details-wrap > span {
+	border: 1px solid #ddd;
+    padding: 1px 4px;
+    font-size: 10px;
+}
+.absolute-img {
+	width: 30px;
+    position: absolute;
+    right: 2px;
+    top: 22px;
+    display: none;
+}
+.Visa .absolute-img.visa {display: block;}
+.Master .absolute-img.master {display: block;}
+.Maestro .absolute-img.maestro {display: block;}
+.form-wrap {
+	margin-bottom: 20px;
+}
+.form-inline-form {
+	border: 1px solid #ddd;
+    padding: 15px 25px;
+    margin-top: 20px;
+}
+.js-myList-wrapper .form-inline-form {
+	display: none;
+}
+.js-myList-wrapper.active .form-inline-form {
+	display: block;
+}
