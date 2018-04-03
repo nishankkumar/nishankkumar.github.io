@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nishank - Flipkart-Test</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="inner-container form-wrap">
+			<form name="my-form" id="js-my-form">
+				<div class="input-group">
+					<label>Crad Number</label>
+					<input id="cardNum" type="number" maxlength="16" name="firstname" tabindex="0" autofocus required="" placeholder="xxxx xxxx xxxx xxxx">
+					<img class="absolute-img visa" src="img/visa.png" id="js-inp-img" />
+					<img class="absolute-img master" src="img/master.png" id="js-inp-img" />
+					<img class="absolute-img maestro" src="img/maestro.png" id="js-inp-img" />
+				</div>
+				<div class="input-group">
+					<label>Expiry</label>
+					<div class="sub-group clearfix">
+						<div class="form-month-year pull-left">
+							<input type="number" maxlength="2" id="fMM" name="month" tabindex="1" placeholder="MM" required onchange="myFunctionMMYY()" />	
+							<input type="number" maxlength="4" id="fYY" name="year" tabindex="2" placeholder="YYYY" required onchange="myFunctionMMYY()" />	
+						</div>
+						<div class="form-cvv pull-right">
+							<input type="password" maxlength="3" id="fCVV" name="cvv" tabindex="3" placeholder="CVV" /> 	
+						</div>
+					</div>
+				</div>
+				<p id="numError"></p>
+				<input type="button" id="fbtn" value="Submit" tabindex="4">
+			</form>	
+		</div>
+		<div class="inner-container list-wrap">
+			<ul class="my-list" id="js-my-list">
+				<li class="js-myList-wrapper">
+					<div class="edit-delete-wrap clearfix">
+						<span class="pull-left">Citibank Credit Crad</span>
+						<div class="edit-delete pull-right">
+							<a class="js-edit">Edit</a> 
+							<a class="js-delete">
+								<img class="delete-img" src="img/delete.png" />
+							</a> 
+						</div>
+					</div>
+					<div class="details-wrap clearfix">
+						<span class="pull-left">VISA</span>
+						<p class="pull-left">1234 12** **** 1234</p>
+					</div>
+					<div class="form-inline-form" class="js-collapsable-section">
+						<form name="my-form" id="js-my-form">
+							<div class="input-group">
+								<label>Crad Number</label>
+								<input id="cardNum" type="number" maxlength="16" name="firstname" tabindex="0" autofocus required="" placeholder="xxxx xxxx xxxx xxxx" value="1234123412341234">
+								<img class="absolute-img" src="img/visa.png" id="js-inp-img" />
+							</div>
+							<div class="input-group">
+								<label>Expiry</label>
+								<div class="sub-group clearfix">
+									<div class="form-month-year pull-left">
+										<input type="number" maxlength="2" name="month" value="02" placeholder="MM" required />	
+										<input type="number" maxlength="4" name="year" value="2018" placeholder="YYYY" required />	
+									</div>
+									<div class="form-cvv pull-right">
+										<input type="password" maxlength="3" name="cvv" value="***" placeholder="CVV" /> 	
+									</div>
+								</div>
+							</div>
+							<p id="numError"></p>
+							<input type="submit" id="fbtn" value="Submit">
+						</form>
+					</div>
+				</li>
+				<li class="js-myList-wrapper">
+					<div class="edit-delete-wrap clearfix">
+						<span class="pull-left">Citibank Credit Crad</span>
+						<div class="edit-delete pull-right">
+							<a class="js-edit">Edit</a> 
+							<a class="js-delete">
+								<img class="delete-img" src="img/delete.png" />
+							</a> 
+						</div>
+					</div>
+					<div class="details-wrap clearfix">
+						<span class="pull-left">VISA</span>
+						<p class="pull-left">1234 12** **** 1234</p>
+					</div>
+					<div class="form-inline-form" class="js-collapsable-section">
+						<form name="my-form" id="js-my-form">
+							<div class="input-group">
+								<label>Crad Number</label>
+								<input id="cardNum" type="number" maxlength="16" name="firstname" tabindex="0" autofocus required="" placeholder="xxxx xxxx xxxx xxxx" value="1234123412341234">
+								<img class="absolute-img" src="img/visa.png" id="js-inp-img" />
+							</div>
+							<div class="input-group">
+								<label>Expiry</label>
+								<div class="sub-group clearfix">
+									<div class="form-month-year pull-left">
+										<input type="number" maxlength="2" name="month" value="02" placeholder="MM" required />	
+										<input type="number" maxlength="4" name="year" value="2018" placeholder="YYYY" required />	
+									</div>
+									<div class="form-cvv pull-right">
+										<input type="password" maxlength="3" name="cvv" value="***" placeholder="CVV" /> 	
+									</div>
+								</div>
+							</div>
+							<p id="numError"></p>
+							<input type="submit" id="fbtn" value="Submit">
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<!-- script goes below -->
+	<script src="js/main.js"></script>
+</body>
+</html>
