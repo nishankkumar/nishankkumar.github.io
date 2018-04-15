@@ -1,0 +1,235 @@
+$text-blue: #008CFF;
+$text-white: #FFF;
+$border-color-gray: #ececec;
+.mob-container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.text-blue {
+    color: #008CFF;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+.text-gray {
+    color: #ccc;
+}
+.font-14 {
+    font-size: 14px;
+    line-height: 1.2;
+}
+.font-16 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+.font-18 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+.font-22 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+.text-center {
+    text-align: center;
+}
+.search-header {
+    color: #8c8c8c;
+    border-bottom: 2px solid $border-color-gray;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+.time-select-block, .location-block {
+    border-bottom: 1px solid $border-color-gray;
+}
+.time-select-block {
+    &.close-wrap  {
+        &:hover  {
+            background: #F6D5AC;
+            cursor: pointer;
+            .common-block {
+                span, p {
+                    color: $text-white !important;
+                }
+            }
+            .loc-desc div.divide-block {
+                border-left-color: $text-white;
+            }
+        }
+    }
+}
+.loc-desc div.swap-block {
+    padding: 10px 15px;
+    border-radius: 50%; 
+    border: 1px solid #ececec;
+    margin: 20px 22%;
+    height: 46px;
+    width: 46px;
+}
+.loc-desc div.divide-block {
+    padding: 0;
+    margin: 0 17% 0 27%;
+    width: 46px;
+    height: 46px;
+    border-left: 1px solid #ececec;
+}
+.loc-desc > div {
+    float: left;
+    width: 20%;
+}
+.loc-desc {
+    padding: 15px;
+}
+.class-block-wrap {
+    display: flex;
+    .class-block {
+        flex: 1;
+        text-align: center;
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        span {
+            font-size: 14px;
+            line-height: 1.2;
+            color: #ccc;
+        }
+    }
+}
+.btn-custom {
+    width: 160px;
+    padding: 5px;
+    background: #008CFF;
+    color: #FFF;
+    font-weight: bold;
+    margin: 20px auto;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
+    &:hover, &:focus, &:active {
+        background: #008CFF;
+        color: #FFF;
+        border: none;
+        outline: none;
+    } 
+}
+.travellers-wrap {
+    padding: 15px;
+    border-bottom: 1px solid $border-color-gray;
+}
+
+.common-block {
+    > span {
+        color: $text-blue;
+        font-size: 14px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+    > p {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    > div {
+        > span {
+            display: block;
+            font-size: 10px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            font-weight: bold;
+            &.light-text {
+                color: #ccc;
+                text-transform: capitalize;
+            }
+        }
+    }
+    &.layout-update {
+        > span {
+            float: left;
+            width: 100%;    
+        }
+        > p {
+            float: left;
+            margin-right: 5px;
+            font-size: 29px;
+        }
+        > div {
+            float: left;
+            margin-top: 6px;
+        }
+
+    }
+}
+.time-select-block {
+    position: relative;
+    .select-date {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .btn-close {
+        left: auto;
+        bottom: auto;
+        font-size: 20px;
+        top: 0;
+        right: 5px;
+        color: #bbb;
+        &:before {
+            content: 'x';
+        }
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+        }
+    }
+}
+.btn-fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 99;
+}
+.cal-row {
+    display: flex;
+    .cal-col {
+        flex: 1;
+        text-align: center;
+        color: #000;
+        padding: 5px;
+        &:hover {
+            background: #F6D5AC;
+            cursor: pointer;
+        }
+        &.cal-cell-selected-first, &.cal-cell-selected-last {
+            background: #00b300;
+            color: #fff;
+        }
+        &.cal-cell-selected-middle {
+            background: #e6ffe6;
+        }
+        &.cal-cell-disable, &.cal-cell-expired {
+            color: #bbb;
+            background: transparent;
+            cursor: inherit;
+        }
+    }
+}
+.cal-month-view {
+    p {
+        margin: 0;
+        padding: 20px 20px 5px 20px;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: bold;
+    }
+}
