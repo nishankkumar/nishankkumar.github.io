@@ -4,7 +4,7 @@ import Layout from './Layout';
 import TimeSelect from './TimeSelect';
 import {DAY, MONTH} from '../constant';
 
-class CalenderView extends React.Component {
+class CalendarView extends React.Component {
 	constructor(props) {
 	  super(props);
 	  this.state = {
@@ -133,4 +133,4 @@ class CalenderView extends React.Component {
 	}
 }
 
-export default CalenderView;
+export default CalendarView;

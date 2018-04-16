@@ -37,7 +37,7 @@ Look in `package.json` for dev dependencies.
 ```
 
 
-Dependency Versions
+For Ststic File Generation
 ------
 Run below command for buiding project.
 
