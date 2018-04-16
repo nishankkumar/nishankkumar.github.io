@@ -32,39 +32,39 @@ class CalenderView extends React.Component {
 	}
 	createCalendar(year, month) {
 		var results = [];
-	  
+
 		// find out first and last days of the month
 		var firstDate = new Date(year, month, 1);
 		var lastDate = new Date(year, month + 1, 0)
 
-	  // calculate first sunday and last saturday
-	  var firstSunday = this.getFirstSunday(firstDate);
-	  var lastSaturday = this.getLastSaturday(lastDate);
+		// calculate first sunday and last saturday
+		var firstSunday = this.getFirstSunday(firstDate);
+		var lastSaturday = this.getLastSaturday(lastDate);
 
 		// iterate days starting from first sunday
 		var iterator = new Date(firstSunday);
-	  var i = 0;
-	  
-	  // ..until last saturday
-	  while (iterator <= lastSaturday) {
-			if (i++ % 7 === 0) {
-	    	// start new week when sunday
-	    	var week = [];
-				results.push(week);
-			}
-	    // push day to week
-			week.push({
-	    	date: new Date(iterator),
-	      expired: iterator <= new Date().setDate(new Date().getDate() - 1), // add indicator if before current month
-	      before: iterator < firstDate, // add indicator if before current month
-	      after: iterator > lastDate // add indicator if after current month
-	    });
+		var i = 0;
 
-			// iterate to next day
-			iterator.setDate(iterator.getDate() + 1);
+		// ..until last saturday
+		while (iterator <= lastSaturday) {
+			if (i++ % 7 === 0) {
+		// start new week when sunday
+		var week = [];
+		results.push(week);
+		}
+		// push day to week
+		week.push({
+			date: new Date(iterator),
+		expired: iterator <= new Date().setDate(new Date().getDate() - 1), // add indicator if before current month
+		before: iterator < firstDate, // add indicator if before current month
+		after: iterator > lastDate // add indicator if after current month
+		});
+
+		// iterate to next day
+		iterator.setDate(iterator.getDate() + 1);
 		}
 
-	  return results;
+		return results;
 	}
 	firstSelectedDate = null;
 	secondSelectedDate = null;
@@ -101,7 +101,7 @@ class CalenderView extends React.Component {
 		const date = new Date();
 		return (
 			<div>
-			 	<TimeSelect isCloseButton dateObjFirst={this.state.firstSelectedDate} dateObjLast={this.state.secondSelectedDate} />
+			 	<TimeSelect isCloseButton dateObjFirst={this.state.firstSelectedDate || undefined} dateObjLast={this.state.secondSelectedDate || undefined} />
 
 			 	{
 			 		[...Array(12 - date.getMonth())].map(function(v, i){

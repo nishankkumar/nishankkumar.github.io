@@ -20,7 +20,11 @@ class Location extends React.Component {
 					</div>
 				</div>
 				<div className="swap-block">
-					<img src="/public/img/roundtrip.png" />
+					<img src="/public/img/roundtrip.png"
+						srcSet="/public/img/roundtrip.png 1x,
+					            /public/img/roundtrip@2x.png 2x,
+					            /public/img/roundtrip@3x.png 3x"
+		             />
 				</div>
 				<div className="common-block">
 					<span>To</span>
